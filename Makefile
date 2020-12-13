@@ -163,6 +163,33 @@ src/chaisse.cpp.s:
 	$(MAKE) -f CMakeFiles/chaisse.dir/build.make CMakeFiles/chaisse.dir/src/chaisse.cpp.s
 .PHONY : src/chaisse.cpp.s
 
+src/com/connection.o: src/com/connection.cpp.o
+
+.PHONY : src/com/connection.o
+
+# target to build an object file
+src/com/connection.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.o
+.PHONY : src/com/connection.cpp.o
+
+src/com/connection.i: src/com/connection.cpp.i
+
+.PHONY : src/com/connection.i
+
+# target to preprocess a source file
+src/com/connection.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.i
+.PHONY : src/com/connection.cpp.i
+
+src/com/connection.s: src/com/connection.cpp.s
+
+.PHONY : src/com/connection.s
+
+# target to generate assembly for a file
+src/com/connection.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.s
+.PHONY : src/com/connection.cpp.s
+
 src/srv/server.o: src/srv/server.cpp.o
 
 .PHONY : src/srv/server.o
@@ -203,6 +230,9 @@ help:
 	@echo "... src/chaisse.o"
 	@echo "... src/chaisse.i"
 	@echo "... src/chaisse.s"
+	@echo "... src/com/connection.o"
+	@echo "... src/com/connection.i"
+	@echo "... src/com/connection.s"
 	@echo "... src/srv/server.o"
 	@echo "... src/srv/server.i"
 	@echo "... src/srv/server.s"

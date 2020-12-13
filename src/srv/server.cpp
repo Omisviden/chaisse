@@ -1,11 +1,13 @@
 #include "server.hpp"
+#include "../com/connection.hpp"
 #include <iostream>
 
 int main()
 {
   server srv;
   srv.wait_for_connection();
-  srv.send_message('c', "hello world!");
+  connection co(srv.m_fdSocket);// srv.send_message('c', "hello world!");
+  co.send_message(MSG, "hello world ! :3");
 }
 
 server::server()
@@ -52,14 +54,4 @@ void server::wait_for_connection()
     }
   }
   std::cout<<"connection entrante"<<std::endl;
-}
-
-void server::send_message(char messageType, std::string message)
-{
-  char requete[50];
-
-  int longueur = snprintf(requete, (int)message.length()+2,
-                      "%c%c%s", (int)message.length()+'\0', messageType+'\0',
-                      message.c_str());
-  send(m_fdSocket, requete, longueur, 0);
 }

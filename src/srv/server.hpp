@@ -1,6 +1,5 @@
 #ifndef SERVER_HPP
 #define SERVER_HPP
-
 #include <iostream>
 #include <unistd.h>
 #include <sys/types.h>
@@ -26,7 +25,7 @@ public:
 
   void wait_for_connection();
   void send_message(char messageType, std::string message);
-private:
+//private:
   int m_fdServer;
   int m_fdSocket;
 };
