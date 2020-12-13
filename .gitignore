@@ -148,7 +148,7 @@ nCrunchTemp_*
 *.mm.*
 AutoTest.Net/
 
-# Web workbench (sass)
+# Web workbench (sass)CMakeCache.txt  CMakeFiles  cmake_install.cmake
 .sass-cache/
 
 # Installshield output folder
@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+#CMake de ses morts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
