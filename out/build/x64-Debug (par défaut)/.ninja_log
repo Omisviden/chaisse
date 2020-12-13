@@ -3,3 +3,8 @@
 711	930	629391697	chaisse.exe	e6155d5390f2de2a
 1	310	629588154	CMakeFiles/chaisse.dir/src/chaisse.cpp.obj	8524ed0af89bb16b
 310	419	629588154	chaisse.exe	e6155d5390f2de2a
+1	296	629589576	CMakeFiles/chaisse.dir/src/Piece.cpp.obj	4c6252d8fd7f6296
+6	296	629589576	CMakeFiles/chaisse.dir/src/Pawn.cpp.obj	74f1cfb203154722
+3	565	629589577	CMakeFiles/chaisse.dir/src/main.cpp.obj	87c8ff246ba92550
+5	573	629589577	CMakeFiles/chaisse.dir/src/chess.cpp.obj	5cf23f950cb33d52
+574	691	629589577	chaisse.exe	6bd2c4357f727fe1
