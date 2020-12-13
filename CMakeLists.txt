@@ -6,6 +6,6 @@ cmake_minimum_required (VERSION 3.8)
 project ("chaisse")
 
 # Ajoutez une source à l'exécutable de ce projet.
-add_executable (chaisse "chaisse.cpp" "chaisse.h")
+add_executable (chaisse "src/chaisse.cpp")
 
 # TODO: Ajoutez des tests et installez des cibles si nécessaire.
