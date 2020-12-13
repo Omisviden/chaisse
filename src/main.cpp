@@ -1,12 +1,13 @@
 ﻿#include <iostream>
 #include "chess.hpp"
 
-// Utiliser algorithm, des lock_guard, std::array, des interfaces (PAS DE CLASSE PIECE)
-// Classes abstraites!
+// Utiliser algorithm, des lock_guard (en cas de prog concurrentielle), std::array, des interfaces
+// Classes abstraites!	
 
+using namespace std;
 
 int main()
 {
-	std::cout << "Hello World" << std::endl;
+	cout << "Hello World" << endl;
 	return 0;
 }
