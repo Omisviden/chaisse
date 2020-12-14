@@ -1,8 +1,9 @@
 #include "chess.hpp"
-#include <iostream>
 #include "Piece.hpp"
 #include "Pawn.hpp"
 
+#include <iostream>
+#include <string>
 /// <summary>
 /// Single purpose of this namespace: Managing the board state.
 /// Dependencies: A game logic module
@@ -31,7 +32,9 @@ namespace chess
 		BKing = 'k', // Burger king haha
 	};
 
-	void init_chessboard()
+	char chessboard[8][8];
+
+	void init_board()
 	{
 		// bool <=> int, 0 = false & 1 = true so we can use the loop index as our color directly.
 		// 0 = Black; 1 = White
@@ -39,7 +42,10 @@ namespace chess
 		{
 			for (int j = 0; j < 8; j++)
 			{
-				chessboard[i][j] = ' ';
+				if ((i + j) % 2)
+					chessboard[i][j] = ' ';
+				else
+					chessboard[i][j] = '.';
 			}
 		}
 
@@ -81,22 +87,25 @@ namespace chess
 
 		chessboard[3][7] = BQueen;
 		chessboard[4][7] = BKing; // Burger king!!!
-
 	}
 
 	void print_board()
 	{
-		for (int i = 0; i < 8; i++)
+		std::cout << "============" << std::endl;
+		for (int i = 7; i > -1; i--)
 		{
-			for (int j = 7; j > -1; j--)
+			std::cout << "||";
+			for (int j = 0; j < 8; j++)
 			{
-				std::cout << chessboard[i][j];
+				std::cout << chessboard[j][i];
 			}
+			std::cout << "||" << std::endl;
 		}
+		std::cout << "============" << std::endl;
 	}
 
 	void move_piece(Piece& piece, int x, int y)
 	{
-		std::cout << "Haha";
+		throw std::string("ERREUR: Pas encore implémenté");
 	}
 }
