@@ -2,7 +2,7 @@
 #include <vector>
 #include <array>
 /// <summary>
-/// Single purpose of this class: Provide an interface for piece control.
+/// The Piece header file provides an interface for piece control.
 /// </summary>
 class Piece
 {
@@ -16,7 +16,10 @@ public:
 	virtual int get_col() = 0;
 	virtual void set_col(int) = 0;
 
+	virtual char get_repr() = 0;
+
 protected:
-	int m_x, m_y, m_color;
+	int _row, _col;
 	std::vector<std::array<int, 2>> m_legal_moves;
+	char _repr;
 };
