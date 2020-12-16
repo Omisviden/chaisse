@@ -56,28 +56,35 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 build cmake_object_order_depends_target_chaisse: phony || CMakeFiles\chaisse.dir
 
 build CMakeFiles\chaisse.dir\src\main.cpp.obj: CXX_COMPILER__chaisse_Debug ..\..\..\src\main.cpp || cmake_object_order_depends_target_chaisse
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   OBJECT_DIR = CMakeFiles\chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles\chaisse.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\chaisse.dir\
   TARGET_PDB = chaisse.pdb
 
 build CMakeFiles\chaisse.dir\src\game\Pawn.cpp.obj: CXX_COMPILER__chaisse_Debug ..\..\..\src\game\Pawn.cpp || cmake_object_order_depends_target_chaisse
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   OBJECT_DIR = CMakeFiles\chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles\chaisse.dir\src\game
   TARGET_COMPILE_PDB = CMakeFiles\chaisse.dir\
   TARGET_PDB = chaisse.pdb
 
 build CMakeFiles\chaisse.dir\src\game\chess.cpp.obj: CXX_COMPILER__chaisse_Debug ..\..\..\src\game\chess.cpp || cmake_object_order_depends_target_chaisse
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   OBJECT_DIR = CMakeFiles\chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles\chaisse.dir\src\game
   TARGET_COMPILE_PDB = CMakeFiles\chaisse.dir\
   TARGET_PDB = chaisse.pdb
 
 build CMakeFiles\chaisse.dir\src\game\logic.cpp.obj: CXX_COMPILER__chaisse_Debug ..\..\..\src\game\logic.cpp || cmake_object_order_depends_target_chaisse
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  OBJECT_DIR = CMakeFiles\chaisse.dir
+  OBJECT_FILE_DIR = CMakeFiles\chaisse.dir\src\game
+  TARGET_COMPILE_PDB = CMakeFiles\chaisse.dir\
+  TARGET_PDB = chaisse.pdb
+
+build CMakeFiles\chaisse.dir\src\game\Queen.cpp.obj: CXX_COMPILER__chaisse_Debug ..\..\..\src\game\Queen.cpp || cmake_object_order_depends_target_chaisse
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   OBJECT_DIR = CMakeFiles\chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles\chaisse.dir\src\game
   TARGET_COMPILE_PDB = CMakeFiles\chaisse.dir\
@@ -91,7 +98,7 @@ build CMakeFiles\chaisse.dir\src\game\logic.cpp.obj: CXX_COMPILER__chaisse_Debug
 #############################################
 # Link the executable chaisse.exe
 
-build chaisse.exe: CXX_EXECUTABLE_LINKER__chaisse_Debug CMakeFiles\chaisse.dir\src\main.cpp.obj CMakeFiles\chaisse.dir\src\game\Pawn.cpp.obj CMakeFiles\chaisse.dir\src\game\chess.cpp.obj CMakeFiles\chaisse.dir\src\game\logic.cpp.obj
+build chaisse.exe: CXX_EXECUTABLE_LINKER__chaisse_Debug CMakeFiles\chaisse.dir\src\main.cpp.obj CMakeFiles\chaisse.dir\src\game\Pawn.cpp.obj CMakeFiles\chaisse.dir\src\game\chess.cpp.obj CMakeFiles\chaisse.dir\src\game\logic.cpp.obj CMakeFiles\chaisse.dir\src\game\Queen.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

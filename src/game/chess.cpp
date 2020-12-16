@@ -1,51 +1,47 @@
-﻿#include "chess.hpp"
+﻿#include <iostream>
+#include <string>
+#include <array>
+#include <memory>
+
+#include "chess.hpp"
 #include "Piece.hpp"
 #include "Pawn.hpp"
+#include "Queen.hpp"
 
-#include <iostream>
-#include <string>
+#include "toolbox.hpp"
 
 /// <summary>
 /// Single purpose of this namespace: Managing the board state.
 /// Dependencies: A game logic module
 /// </summary>
 
+
 namespace chess
 {
 	// What do we need in a game of chess? 
 	// - Ways to move pieces
 	// - Ways to make pieces disappear (captures and promotion)
-	enum Color : bool { Black = true, White = false };
 
-	Piece* chessboard[8][8];
+
+	enum class Color : bool { Black = true, White = false };
+
+	toolbox::Array2D<std::unique_ptr<Piece>, 8, 8> chessboard;
 
 	void init_board()
 	{
 		// bool <=> int, 0 = false & 1 = true so we can use the loop index as our color directly.
 		// 0 = White; 1 = Black
-		for (int i = 0; i < 8; i++)
-		{
-			for (int j = 0; j < 8; j++)
-			{
-				chessboard[i][j] = nullptr;
-			}
-		}
 
 		for (int color = 0; color < 2; color++)
 		{
 			for (int i = 0; i < 8; i++)
 			{
-				if (color == Black)
-				{
-					Pawn pawn(i, 6, Black);
-					chessboard[i][6] = &pawn;
-				}
+				if (color)
+					chessboard[i][6] = std::make_unique<Pawn>(i, 6, (bool)Color::Black);
 				else
-				{
-					Pawn pawn(i, 6, White);
-					chessboard[i][1] = &pawn;
-				}
+					chessboard[i][1] = std::make_unique<Pawn>(i, 6, (bool)Color::White);
 			}
+
 		}
 
 		// Knights, bishops and rooks.
@@ -65,23 +61,23 @@ namespace chess
 		//chessboard[7][7] = BRook;
 
 		//// Queens and kings.
-		//chessboard[3][0] = WQueen;
+		chessboard[3][0] = std::make_unique<Queen>(3, 0, (bool)Color::White);
 		//chessboard[4][0] = WKing;
 
-		//chessboard[3][7] = BQueen;
+		chessboard[3][7] = std::make_unique<Queen>(3, 7, (bool)Color::Black);
 		//chessboard[4][7] = BKing; // Burger king!!!
 	}
 
 	void print_board()
 	{
 		std::cout << "============" << std::endl;
-		for (int i = 7; i > -1; i--)
+		for (int i = 0; i < 8; i++)
 		{
 			std::cout << "||";
 			for (int j = 0; j < 8; j++)
 			{
 				if (chessboard[j][i] != nullptr)
-					std::cout << chessboard[j][i]->get_repr();
+					std::cout << chessboard[j][i].get()->get_repr();
 				else
 					std::cout << " ";
 			}
@@ -90,10 +86,23 @@ namespace chess
 		std::cout << "============" << std::endl;
 	}
 
-	void move_piece(Piece& piece, int x, int y)
+	void move_piece(std::unique_ptr<Piece>& piece, int col, int row)
 	{
-		piece.set_col(x);
-		piece.set_row(y);
-		throw std::string("ERREUR: Pas encore implémenté");
+		// This is supposed to move the shared_ptr from the old location to the new one, overriding any other piece pointers on it.
+		// Since the other piece pointer is a unique_ptr, it *should* bring the counter to zero and kill the associated piece.
+
+		int old_col = piece.get()->get_col();
+
+		int old_row = piece.get()->get_row();
+
+		chessboard[col][row] = std::move(piece);
+		chessboard[col][row].get()->set_col(col);
+		chessboard[col][row].get()->set_row(row);
+		chessboard[old_col][old_row] = nullptr;
+	}
+
+	void play_turn()
+	{
+		move_piece(chessboard[3][0], 4, 3);
 	}
 }
