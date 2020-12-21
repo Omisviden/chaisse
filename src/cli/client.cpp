@@ -2,24 +2,21 @@
 #include <iostream>
 
 int main(int argc, char *argv[]){
+  //usage
+  if (argc != 3) {
+      printf("Usage: %s serveur message\n", argv[0]);
+      perror("nombre de paramètres incorrect");
+      return -1;
+  }
 
-    if (argc != 3) {
-        printf("Usage: %s serveur message\n", argv[0]);
-        perror("nombre de paramètres incorrect");
-        return -1;
-    }
-    client cli(argv[1]);
+  client cli(argv[1]);
+  cli.m_co.read_message();
+  cli.m_co.send_message(TEST, argv[2]);
 
-    /*
-    connection new_connection(argv[1]);
-    std::string msg = argv[2];
-    new_connection.send_message(TEST, msg);
-    new_connection.read_message();
-  std::cout<<"hi"<<std::endl;*/
   return 0;
 }
 
-client::client(const char* serverName)
+client::client(const char* serverName) : m_co(0)
 {
   struct sockaddr_in addr_serveur;
   struct hostent *serveur;
@@ -38,6 +35,8 @@ client::client(const char* serverName)
   if (connect(m_fdSocket, /* connexion au serveur */
               (struct sockaddr *) &addr_serveur, sizeof addr_serveur) < 0)
     {perror("connect"); exit(-1);}
+
+  m_co = connection(m_fdSocket);
 }
 
 client::~client()

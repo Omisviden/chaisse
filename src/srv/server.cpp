@@ -7,6 +7,7 @@ int main()
   srv.wait_for_connection();
   connection co(srv.m_fdSocket);// srv.send_message('c', "hello world!");
   co.send_message(MSG, "hello world ! :3");
+  co.read_message();
 }
 
 server::server()
