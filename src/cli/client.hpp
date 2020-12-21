@@ -1,5 +1,5 @@
-#ifndef SERVER_HPP
-#define SERVER_HPP
+#ifndef CLIENT_HPP
+#define CLIENT_HPP
 
 //includes
 #include <iostream>
@@ -14,21 +14,21 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+//#include <string>
 
 #include "../com/connection.hpp"
 
-
-class server
+class client
 {
 public:
-  server();
-  ~server();
+  client(const char* serverName);
+  ~client();
 
-  void wait_for_connection();
-  void send_message(char messageType, std::string message);
-//private:
-  int m_fdServer;
-  int m_fdSocket; //a devenir: un tableau
+private:
+  int m_fdSocket;
 };
 
-#endif //SERVER_HPP
+
+
+
+#endif //CLIENT_HPP

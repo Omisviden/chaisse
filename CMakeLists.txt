@@ -13,5 +13,5 @@ set(COMMUNICATION "src/com/connection.hpp" "src/com/connection.cpp")
 # Ajoutez une source à l'exécutable de ce projet.
 add_executable (chaisse "src/chaisse.cpp")
 add_executable (server ${COMMUNICATION} "src/srv/server.hpp" "src/srv/server.cpp")
-
+add_executable (client ${COMMUNICATION} "src/cli/client.hpp" "src/cli/client.cpp")
 # TODO: Ajoutez des tests et installez des cibles si nécessaire.

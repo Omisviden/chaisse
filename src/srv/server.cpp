@@ -1,5 +1,4 @@
 #include "server.hpp"
-#include "../com/connection.hpp"
 #include <iostream>
 
 int main()

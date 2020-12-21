@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+#=============================================================================
 # Target rules for targets named chaisse
 
 # Build rule for target.
@@ -163,12 +176,40 @@ src/chaisse.cpp.s:
 	$(MAKE) -f CMakeFiles/chaisse.dir/build.make CMakeFiles/chaisse.dir/src/chaisse.cpp.s
 .PHONY : src/chaisse.cpp.s
 
+src/cli/client.o: src/cli/client.cpp.o
+
+.PHONY : src/cli/client.o
+
+# target to build an object file
+src/cli/client.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/cli/client.cpp.o
+.PHONY : src/cli/client.cpp.o
+
+src/cli/client.i: src/cli/client.cpp.i
+
+.PHONY : src/cli/client.i
+
+# target to preprocess a source file
+src/cli/client.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/cli/client.cpp.i
+.PHONY : src/cli/client.cpp.i
+
+src/cli/client.s: src/cli/client.cpp.s
+
+.PHONY : src/cli/client.s
+
+# target to generate assembly for a file
+src/cli/client.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/cli/client.cpp.s
+.PHONY : src/cli/client.cpp.s
+
 src/com/connection.o: src/com/connection.cpp.o
 
 .PHONY : src/com/connection.o
 
 # target to build an object file
 src/com/connection.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/com/connection.cpp.o
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.o
 .PHONY : src/com/connection.cpp.o
 
@@ -178,6 +219,7 @@ src/com/connection.i: src/com/connection.cpp.i
 
 # target to preprocess a source file
 src/com/connection.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/com/connection.cpp.i
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.i
 .PHONY : src/com/connection.cpp.i
 
@@ -187,6 +229,7 @@ src/com/connection.s: src/com/connection.cpp.s
 
 # target to generate assembly for a file
 src/com/connection.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/com/connection.cpp.s
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/com/connection.cpp.s
 .PHONY : src/com/connection.cpp.s
 
@@ -224,12 +267,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... client"
 	@echo "... chaisse"
 	@echo "... rebuild_cache"
 	@echo "... server"
 	@echo "... src/chaisse.o"
 	@echo "... src/chaisse.i"
 	@echo "... src/chaisse.s"
+	@echo "... src/cli/client.o"
+	@echo "... src/cli/client.i"
+	@echo "... src/cli/client.s"
 	@echo "... src/com/connection.o"
 	@echo "... src/com/connection.i"
 	@echo "... src/com/connection.s"
