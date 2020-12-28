@@ -3,7 +3,7 @@
 
 // It doesn't really make sense to have an empty constructor since pieces always have to be assigned coordinates and a color.
 Queen::Queen(int x, int y, bool color) : _row(x), _col(y)
-{
+{	
 	if (color) // Black = 1; White = 0
 		_repr = 'm';
 	else

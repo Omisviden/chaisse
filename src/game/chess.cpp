@@ -26,8 +26,10 @@ namespace chess
 	enum class Color : bool { Black = true, White = false };
 
 	toolbox::Array2D<std::unique_ptr<Piece>, 8, 8> chessboard;
+	
 
-	void init_board()
+	// Initializes the chessboard.
+	void init_board() 	
 	{
 		// bool <=> int, 0 = false & 1 = true so we can use the loop index as our color directly.
 		// 0 = White; 1 = Black
@@ -36,6 +38,8 @@ namespace chess
 		{
 			for (int i = 0; i < 8; i++)
 			{
+				// Since make_unique builds an object and wraps it in a unique pointer, both the Pawn and
+				// the unique_ptr depend entirely on the chessboard: their lifetime is tied to it.
 				if (color)
 					chessboard[i][6] = std::make_unique<Pawn>(i, 6, (bool)Color::Black);
 				else
