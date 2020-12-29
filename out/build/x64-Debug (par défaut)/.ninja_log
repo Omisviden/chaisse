@@ -19,3 +19,9 @@
 809	981	629898483	chaisse.exe	9c5324cc0229f62a
 0	647	630288586	CMakeFiles/chaisse.dir/src/game/logic.cpp.obj	c401e6d5a28be269
 648	818	630288586	chaisse.exe	9c5324cc0229f62a
+4	597	630903175	CMakeFiles/chaisse.dir/src/game/logic.cpp.obj	c401e6d5a28be269
+6	603	630903175	CMakeFiles/chaisse.dir/src/game/Queen.cpp.obj	b841d3b072079fe6
+2	604	630903175	CMakeFiles/chaisse.dir/src/game/Pawn.cpp.obj	52e398120eb992a4
+0	675	630903175	CMakeFiles/chaisse.dir/src/main.cpp.obj	498ce865c6d7fdb3
+8	715	630903175	CMakeFiles/chaisse.dir/src/game/chess.cpp.obj	f4ed47505b163004
+716	841	630903175	chaisse.exe	9c5324cc0229f62a
