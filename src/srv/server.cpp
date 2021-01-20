@@ -3,11 +3,23 @@
 
 int main()
 {
+      //initialise WinSocks sous windows
+  #ifdef _WIN32
+    WSADATA WSAData;
+    WSAStartup(MAKEWORD(2,2), &WSAData);
+  #endif // _WIN32
+
   server srv;
   srv.wait_for_connection();
   connection co(srv.m_fdSocket);// srv.send_message('c', "hello world!");
-  co.send_message(MSG, "hello world ! :3");
+  co.send_message(MESSAGE, "hello world ! :3");
   co.read_message();
+
+    //ferme la bibliothèque WinSock
+  #ifdef _WIN32
+    WSACleanup();
+  #endif // _WIN32
+  return 0;
 }
 
 server::server()

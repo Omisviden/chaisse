@@ -1,19 +1,19 @@
 #ifndef SERVER_HPP
 #define SERVER_HPP
 
-//includes
-#include <iostream>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <signal.h>
-#include <arpa/inet.h>
-#include <netdb.h> //gethostbyname
-#include <string.h>
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
+////includes
+//#include <iostream>
+//#include <unistd.h>
+//#include <sys/types.h>
+////#include <sys/socket.h>
+////#include <netinet/in.h>
+//#include <signal.h>
+////#include <arpa/inet.h>
+////#include <netdb.h> //gethostbyname
+//#include <string.h>
+//#include <ctype.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 
 #include "../com/connection.hpp"
 

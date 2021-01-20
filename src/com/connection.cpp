@@ -24,7 +24,11 @@ void connection::send_message(connection_type type, std::string message)
 
 void connection::read_message(){
     char tampon[TAILLE_TAMPON];
-    read(m_fdSocket, tampon, TAILLE_TAMPON);     /* lecture par bloc */
+    #ifdef _WIN32
+        recv(m_fdSocket, tampon, TAILLE_TAMPON, 0);     /* lecture par bloc */
+    #else
+        read(m_fdSocket, tampon, TAILLE_TAMPON);
+    #endif // _WIN32
 
     // Décriptage de la requete
     std::cout<<"Taille du message : "<< tampon[0]-'\0' <<std::endl;

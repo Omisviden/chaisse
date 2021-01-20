@@ -9,12 +9,23 @@ int main(int argc, char *argv[]){
       return -1;
   }
 
+  //initialise WinSocks sous windows
+  #ifdef _WIN32
+    WSADATA WSAData;
+    WSAStartup(MAKEWORD(2,2), &WSAData);
+  #endif // _WIN32
+
   client cli(argv[1]);
   cli.m_co.read_message();
   cli.m_co.send_message(TEST, argv[2]);
 
+  //ferme la bibliothèque WinSock
+  #ifdef _WIN32
+    WSACleanup();
+  #endif // _WIN32
   return 0;
 }
+
 
 client::client(const char* serverName) : m_co(0)
 {
