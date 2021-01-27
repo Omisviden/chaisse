@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/main.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/main.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/main.cpp"
+},
+{
+  "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/Pawn.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/Pawn.cpp"
+},
+{
+  "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/chess.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/chess.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/chess.cpp"
+},
+{
+  "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/logic.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/logic.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/logic.cpp"
+},
+{
+  "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/Queen.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/Queen.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/Queen.cpp"
+}
+]
