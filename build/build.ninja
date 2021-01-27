@@ -73,11 +73,11 @@ build CMakeFiles/chaisse.dir/src/main.cpp.o: CXX_COMPILER__chaisse_Debug ../src/
   OBJECT_DIR = CMakeFiles/chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src
 
-build CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o: CXX_COMPILER__chaisse_Debug ../src/game/Pawn.cpp || cmake_object_order_depends_target_chaisse
-  DEP_FILE = CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o.d
+build CMakeFiles/chaisse.dir/src/game/pieces/Pawn.cpp.o: CXX_COMPILER__chaisse_Debug ../src/game/pieces/Pawn.cpp || cmake_object_order_depends_target_chaisse
+  DEP_FILE = CMakeFiles/chaisse.dir/src/game/pieces/Pawn.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/chaisse.dir
-  OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src/game
+  OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src/game/pieces
 
 build CMakeFiles/chaisse.dir/src/game/chess.cpp.o: CXX_COMPILER__chaisse_Debug ../src/game/chess.cpp || cmake_object_order_depends_target_chaisse
   DEP_FILE = CMakeFiles/chaisse.dir/src/game/chess.cpp.o.d
@@ -91,11 +91,11 @@ build CMakeFiles/chaisse.dir/src/game/logic.cpp.o: CXX_COMPILER__chaisse_Debug .
   OBJECT_DIR = CMakeFiles/chaisse.dir
   OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src/game
 
-build CMakeFiles/chaisse.dir/src/game/Queen.cpp.o: CXX_COMPILER__chaisse_Debug ../src/game/Queen.cpp || cmake_object_order_depends_target_chaisse
-  DEP_FILE = CMakeFiles/chaisse.dir/src/game/Queen.cpp.o.d
+build CMakeFiles/chaisse.dir/src/game/pieces/Queen.cpp.o: CXX_COMPILER__chaisse_Debug ../src/game/pieces/Queen.cpp || cmake_object_order_depends_target_chaisse
+  DEP_FILE = CMakeFiles/chaisse.dir/src/game/pieces/Queen.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/chaisse.dir
-  OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src/game
+  OBJECT_FILE_DIR = CMakeFiles/chaisse.dir/src/game/pieces
 
 
 # =============================================================================
@@ -105,7 +105,7 @@ build CMakeFiles/chaisse.dir/src/game/Queen.cpp.o: CXX_COMPILER__chaisse_Debug .
 #############################################
 # Link the executable chaisse
 
-build chaisse: CXX_EXECUTABLE_LINKER__chaisse_Debug CMakeFiles/chaisse.dir/src/main.cpp.o CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o CMakeFiles/chaisse.dir/src/game/chess.cpp.o CMakeFiles/chaisse.dir/src/game/logic.cpp.o CMakeFiles/chaisse.dir/src/game/Queen.cpp.o
+build chaisse: CXX_EXECUTABLE_LINKER__chaisse_Debug CMakeFiles/chaisse.dir/src/main.cpp.o CMakeFiles/chaisse.dir/src/game/pieces/Pawn.cpp.o CMakeFiles/chaisse.dir/src/game/chess.cpp.o CMakeFiles/chaisse.dir/src/game/logic.cpp.o CMakeFiles/chaisse.dir/src/game/pieces/Queen.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/chaisse.dir
   POST_BUILD = :

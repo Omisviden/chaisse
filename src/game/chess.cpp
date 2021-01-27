@@ -4,11 +4,11 @@
 #include <memory>
 
 #include "chess.hpp"
-#include "Piece.hpp"
-#include "Pawn.hpp"
-#include "Queen.hpp"
+#include "pieces/Piece.hpp"
+#include "pieces/Pawn.hpp"
+#include "pieces/Queen.hpp"
 
-#include "toolbox.hpp"
+#include "templates.hpp"
 
 /// <summary>
 /// Single purpose of this namespace: Managing the board state.
@@ -25,7 +25,7 @@ namespace chess
 
 	enum class Color : bool { Black = true, White = false };
 
-	toolbox::Array2D<std::unique_ptr<Piece>, 8, 8> chessboard;
+	templates::Array2D<std::unique_ptr<Piece>, 8, 8> chessboard;
 	
 
 	// Initializes the chessboard.

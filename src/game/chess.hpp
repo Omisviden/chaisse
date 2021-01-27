@@ -2,7 +2,7 @@
 #include <iostream>
 #include <memory>
 
-#include "Piece.hpp"
+#include "pieces/Piece.hpp"
 
 namespace chess
 {

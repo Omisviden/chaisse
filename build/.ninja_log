@@ -1,11 +1,13 @@
 # ninja log v5
-0	364	1611747346108293917	CMakeFiles/chaisse.dir/src/chaisse.cpp.o	a3fe4ac0968c8d51
-364	496	1611747346238298308	chaisse	cb0068994221b796
-0	55	1611747402980251781	build.ninja	c99bc13e1c7d8072
-1	246	1611747403246927795	CMakeFiles/chaisse.dir/src/game/logic.cpp.o	1c3bdb79591e3e46
-0	423	1611747403423600654	CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o	3ff60395cc7cef68
+0	5	0	clean	a31eedcededa8236
 1	423	1611747403423600654	CMakeFiles/chaisse.dir/src/game/Queen.cpp.o	97e2f8e17a0d205f
-1	961	1611747403960286132	CMakeFiles/chaisse.dir/src/game/chess.cpp.o	8d70749b7d0008e6
-1	638	1611747479812997684	CMakeFiles/chaisse.dir/src/main.cpp.o	434268051101ef07
-1	806	1611747479979670412	CMakeFiles/chaisse.dir/src/game/chess.cpp.o	8d70749b7d0008e6
+1	874	1611748150436104411	CMakeFiles/chaisse.dir/src/game/chess.cpp.o	8d70749b7d0008e6
+0	423	1611747403423600654	CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o	3ff60395cc7cef68
+2	246	1611748149809430148	CMakeFiles/chaisse.dir/src/game/logic.cpp.o	1c3bdb79591e3e46
+1	714	1611748150279435843	CMakeFiles/chaisse.dir/src/main.cpp.o	434268051101ef07
 806	956	1611747480129675869	chaisse	c947ff070e3a2ebd
+0	55	1611748299414986495	build.ninja	c99bc13e1c7d8072
+0	364	1611747346108293917	CMakeFiles/chaisse.dir/src/chaisse.cpp.o	a3fe4ac0968c8d51
+1	283	1611748300698342128	CMakeFiles/chaisse.dir/src/game/pieces/Queen.cpp.o	84e1bd5ff51b2d2d
+1	301	1611748300715009084	CMakeFiles/chaisse.dir/src/game/pieces/Pawn.cpp.o	2531f950a2ce9dac
+301	460	1611748300871678475	chaisse	45cec49d4811c0b9

@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
-  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/Pawn.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/Pawn.cpp",
-  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/Pawn.cpp"
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/pieces/Pawn.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/pieces/Pawn.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/pieces/Pawn.cpp"
 },
 {
   "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
@@ -21,7 +21,7 @@
 },
 {
   "directory": "/home/omi/Dev/LIFAP4/chaisse/build",
-  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/Queen.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/Queen.cpp",
-  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/Queen.cpp"
+  "command": "/usr/bin/g++ -g -std=gnu++17 -o CMakeFiles/chaisse.dir/src/game/pieces/Queen.cpp.o -c /home/omi/Dev/LIFAP4/chaisse/src/game/pieces/Queen.cpp",
+  "file": "/home/omi/Dev/LIFAP4/chaisse/src/game/pieces/Queen.cpp"
 }
 ]
